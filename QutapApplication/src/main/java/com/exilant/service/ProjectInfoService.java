@@ -2,6 +2,8 @@ package com.exilant.service;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.exilant.CommonUtils.Response;
 import com.exilant.model.ProjectInfoModel;
 
@@ -16,5 +18,7 @@ public interface ProjectInfoService {
 	Response updateProjectInfo(ProjectInfoModel projectInfoModel);
 
 	Response deleteProjectInfo(String projectId);
+
+	 
 
 }

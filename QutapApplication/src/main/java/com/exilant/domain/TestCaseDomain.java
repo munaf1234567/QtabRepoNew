@@ -1,13 +1,22 @@
 package com.exilant.domain;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection="TestCase")
 public class TestCaseDomain {
 	@Id
 	private String testCaseID;
 	private String requirementId;
 	private String testScenarioId;
 	private String testCaseDescription;
+	private String testSuiteName;
+	private String reveiwCycle;
+	private String reviewComments;
+	private String reviewStatus;
+	private String comments;
+	private String executionStatus;
+	
 	private String testCaseCategory;
 	private String testCasePriority;
 	private String testCaseTag;
@@ -81,6 +90,42 @@ public class TestCaseDomain {
 	}
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
+	}
+	public String getTestSuiteName() {
+		return testSuiteName;
+	}
+	public void setTestSuiteName(String testSuiteName) {
+		this.testSuiteName = testSuiteName;
+	}
+	public String getReveiwCycle() {
+		return reveiwCycle;
+	}
+	public void setReveiwCycle(String reveiwCycle) {
+		this.reveiwCycle = reveiwCycle;
+	}
+	public String getReviewComments() {
+		return reviewComments;
+	}
+	public void setReviewComments(String reviewComments) {
+		this.reviewComments = reviewComments;
+	}
+	public String getReviewStatus() {
+		return reviewStatus;
+	}
+	public void setReviewStatus(String reviewStatus) {
+		this.reviewStatus = reviewStatus;
+	}
+	public String getComments() {
+		return comments;
+	}
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+	public String getExecutionStatus() {
+		return executionStatus;
+	}
+	public void setExecutionStatus(String executionStatus) {
+		this.executionStatus = executionStatus;
 	}
 	
 
